@@ -16,6 +16,7 @@ contract DonateCrypto {
 
     uint256 public fee = 100;//wei
     uint256 public nextId = 0;
+    address private administrator = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db; //value obtained from the Remix side menu, check the accounts 
 
     mapping(uint256 => Campaign) public campaigns; //id => campanha
 
@@ -50,6 +51,13 @@ contract DonateCrypto {
         recipient.call{value: campaign.balance - fee}("");
 
         campaigns[id].active = false;
+    }
+    
+    function updateFee(uint256 value) public{
+        require(msg.sender == administrator, "You aren't the administrator");
+        require(value > 0, "Fee must be greater than 1");
+
+        fee = value;
     }
 
 }
