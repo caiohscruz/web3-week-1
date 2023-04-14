@@ -9,6 +9,11 @@
 ⬜️ a campanha permitir múltiplas mídias ao invés de uma imagem e um vídeo;
 
 
+# Refs
+
+- https://testnet.bscscan.com/ -> Add network
+- https://testnet.bnbchain.org/faucet-smart  -> Add founds
+
 # web3-week-1
 Project from the first Web3 Week (10-apr-23).
 https://www.luiztools.com.br/w3w
